@@ -33,14 +33,13 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(Long id, String name, String email, String phone, String password, List<Order> orders) {
+    public User(Long id, String name, String email, String phone, String password) {
         super();
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.password = password;
-        this.orders = orders;
     }
 
     public Long getId() {
@@ -87,10 +86,6 @@ public class User implements Serializable {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
-
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -115,5 +110,4 @@ public class User implements Serializable {
             return false;
         return true;
     }
-
 }
